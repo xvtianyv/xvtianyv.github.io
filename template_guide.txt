@@ -1,0 +1,126 @@
+# 博客文章模板使用指南 (v3)
+
+## 简介 (Introduction)
+
+本文档提供了创建新博客文章时可以使用的 HTML 代码片段（模块）。
+所有样式都已在 `blogs/style-guide.html` 文件的 `<style>` 块中预设好。撰写新文章时，请将该文件作为模板，复制其结构和样式。
+
+---
+
+## 使用流程 (Usage Workflow)
+
+1.  **创建文件**: 在 `blogs` 文件夹中创建一个新的 `.html` 文件 (例如: `my-new-article.html`)。
+2.  **复制模板**: 从 `blogs/style-guide.html` 中，将所有代码完整地复制到您新创建的文件中。
+3.  **修改元数据**: 使用下方的【头部模块】指导，修改文章主标题、作者和发布日期。
+4.  **撰写内容**: 在 `<article class="post-content">` 区域，使用下方的【正文模块】来撰写您的文章。
+5.  **更新列表**: 打开项目根目录下的 `blog-list.js` 文件，在 `posts` 数组中为您的新文章添加一个条目。
+
+---
+
+## (一) 头部模块 (Header Modules)
+
+这部分内容位于 `<header class="post-header">` 标签内。
+
+#### 1. 主标题 (Main Title)
+这是您文章最重要的标题。
+```html
+<h1>在这里写下您的文章主标题</h1>
+```
+
+#### 2. 元信息 (Meta Information)
+用于展示作者和发布日期。
+```html
+<p class="post-meta">
+    作者：你的名字 | 发布于：<time datetime="YYYY-MM-DD">YYYY年MM月DD日</time>
+</p>
+```
+
+#### 3. 返回链接 (Back Link)
+一个返回博客列表页的链接。
+```html
+<a href="../BlogList.html" class="back-link">← 返回列表</a>
+```
+
+---
+
+## (二) 正文模块 (Article Body Modules)
+
+这部分内容位于 `<article class="post-content">` 标签内。
+
+#### 1. 正文段落 (Paragraph)
+```html
+<p>这是一段正文内容。</p>
+```
+
+#### 2. 各级标题 (Headings)
+```html
+<h2>这是一个二级标题</h2>
+<h3>这是一个三级标题</h3>
+```
+
+#### 3. 内联文本样式 (Inline Text Styles)
+- **粗体**: `<strong>文字</strong>`
+- *斜体*: `<em>文字</em>`
+- <u>下划线</u>: `<u>文字</u>`
+
+```html
+<p>这是一段包含 <strong>粗体</strong>、<em>斜体</em> 和 <u>下划线</u> 的文字。</p>
+```
+
+#### 4. 内联代码 (Inline Code)
+使用 `<span>` 标签和 `inline-code` 类。
+```html
+<p>在 JavaScript 中，可以使用 <span class="inline-code">const</span> 关键字来声明一个常量。</p>
+```
+
+#### 5. 文本颜色 (Text Color)
+可用的类有：`text-red`, `text-green`, `text-blue`, `text-gray`。
+```html
+<p>您可以让文字显示为<span class="text-red">红色</span>或<span class="text-blue">蓝色</span>。</p>
+```
+
+#### 6. 代码块 (Code Block)
+用于展示多行代码。黑底白字主题。
+```html
+<pre><code>// 这是一个代码块的范例
+function greet(name) {
+    return `Hello, ${name}!`;
+}</code></pre>
+```
+
+#### 7. “问题”模块 (Problem Block)
+```html
+<div class="problem-block">
+    <p>这里写下您遇到的问题描述。</p>
+</div>
+```
+
+#### 8. “分析”模块 (Analysis Block)
+```html
+<div class="analysis-block">
+    <p>这里写下您对问题的分析过程。</p>
+</div>
+```
+
+#### 9. 引用 (Blockquote)
+```html
+<blockquote>
+    这是一段引用的内容。
+</blockquote>
+```
+
+#### 10. 列表 (Lists)
+```html
+<ul>
+    <li>无序列表项一</li>
+</ul>
+
+<ol>
+    <li>有序列表项一</li>
+</ol>
+```
+
+#### 11. 图片 (Image)
+```html
+<img src="path/to/your/image.jpg" alt="图片的描述文字">
+```

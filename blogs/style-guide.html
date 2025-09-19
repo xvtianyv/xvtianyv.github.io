@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客样式说明手册</title>
+    <style>
+        /* --- Basic Setup --- */
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.7; background-color: #f8f9fa; color: #343a40; }
+        .post-container { max-width: 750px; margin: 40px auto; padding: 20px; }
+
+        /* --- Post Header --- */
+        .post-header { border-bottom: 1px solid #dee2e6; padding-bottom: 20px; margin-bottom: 40px; }
+        .post-header h1 { font-family: 'Georgia', 'Times New Roman', serif; font-size: 2.8rem; margin: 0 0 10px 0; line-height: 1.2; }
+        .post-meta { font-size: 0.9rem; color: #6c757d; }
+        .back-link { display: inline-block; margin-top: 20px; font-size: 0.9rem; text-decoration: none; color: #007bff; }
+        .back-link:hover { text-decoration: underline; }
+
+        /* --- Post Content --- */
+        .post-content h2, .post-content h3 { font-family: 'Georgia', 'Times New Roman', serif; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.3; }
+        .post-content h2 { font-size: 2rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .post-content h3 { font-size: 1.5rem; }
+        .post-content p { margin-bottom: 1.2rem; }
+        .post-content a { color: #007bff; }
+        .post-content ul, .post-content ol { padding-left: 25px; }
+
+        /* --- Module Styles --- */
+        .post-content strong { font-weight: 600; }
+        .post-content em { font-style: italic; }
+        .post-content u { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+        /* NEW: Inline Code using a SPAN class */
+        .inline-code {
+            background-color: #f1f3f5;
+            padding: 0.2em 0.4em;
+            margin: 0 0.1em;
+            font-size: 85%;
+            border-radius: 0;
+            border: 1px solid #dee2e6;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        }
+
+        /* Block-level Code: Dark Theme */
+        .post-content pre {
+            background-color: #2d2d2d; /* Dark background */
+            color: #f8f8f2;       /* Light text */
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.95rem;
+        }
+        .post-content pre code { 
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        }
+        
+        /* Blockquotes */
+        .post-content blockquote { margin: 2rem 0; padding: 10px 20px; border-left: 4px solid #ced4da; background-color: #f8f9fa; color: #6c757d; }
+        .post-content img { max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 2rem 0; }
+
+        /* Problem & Analysis Blocks */
+        .problem-block, .analysis-block { margin: 2rem 0; padding: 1.2rem 1.5rem; border-left-width: 5px; border-left-style: solid; border-radius: 0; }
+        .problem-block { background-color: #f9ecec; border-color: #c9a9a9; }
+        .analysis-block { background-color: #ecf9f2; border-color: #a9c9b8; }
+        .problem-block::before, .analysis-block::before { display: block; font-weight: bold; margin-bottom: 0.5rem; }
+        .problem-block::before { content: '问题 (Problem)'; color: #8c6b6b; }
+        .analysis-block::before { content: '分析 (Analysis)'; color: #6b8c7d; }
+
+        /* Text Color Utilities */
+        .text-red { color: #c53030; }
+        .text-green { color: #2f855a; }
+        .text-blue { color: #3182ce; }
+        .text-gray { color: #718096; }
+
+        /* --- Styles for the guide itself --- */
+        .guide-section { margin-bottom: 3rem; }
+        .guide-section h4 { font-family: sans-serif; font-weight: 600; color: #007bff; margin-top: 0; }
+
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <header class="post-header">
+            <h1>博客样式说明手册</h1>
+            <p class="post-meta">本文档是一个动态的说明手册，展示了所有可用的文章样式及其对应的HTML源代码。</p>
+            <a href="../BlogList.html" class="back-link">← 返回博客列表</a>
+        </header>
+
+        <article class="post-content">
+            <p>请将此文件作为您撰写新文章的模板。下文展示了所有可用的样式模块，您可以直接复制所需的HTML代码进行使用。</p>
+
+            <!-- Guide Section: Paragraph -->
+            <div class="guide-section">
+                <h2>正文段落</h2>
+                <h4>效果演示:</h4>
+                <p>这是一段普通的正文。您可以在这里撰写文章的主要内容。</p>
+                <h4>HTML 代码:</h4>
+                <pre><code>&lt;p&gt;这是一段普通的正文。您可以在这里撰写文章的主要内容。&lt;/p&gt;</code></pre>
+            </div>
+
+            <!-- Guide Section: Headings -->
+            <div class="guide-section">
+                <h2>各级标题</h2>
+                <h4>效果演示:</h4>
+                <h2>这是一个二级标题</h2>
+                <h3>这是一个三级标题</h3>
+                <h4>HTML 代码:</h4>
+                <pre><code>&lt;h2&gt;这是一个二级标题&lt;/h2&gt;
+&lt;h3&gt;这是一个三级标题&lt;/h3&gt;</code></pre>
+            </div>
+
+            <!-- Guide Section: Inline Styles -->
+            <div class="guide-section">
+                <h2>内联文本样式</h2>
+                <h4>效果演示:</h4>
+                <p>您可以让文字变为 <strong>粗体</strong>, <em>斜体</em>, 或 <u>下划线</u>。也可以在句子中插入一小段代码，例如 <span class="inline-code">const name = "Gemini";</span>。此外，还可以为文字指定 <span class="text-blue">蓝色</span>、<span class="text-red">红色</span> 或 <span class="text-green">绿色</span>。</p>
+                <h4>HTML 代码:</h4>
+                <pre><code>&lt;strong&gt;粗体&lt;/strong&gt;
+&lt;em&gt;斜体&lt;/em&gt;
+&lt;u&gt;下划线&lt;/u&gt;
+&lt;span class="inline-code"&gt;const name = "Gemini";&lt;/span&gt;
+&lt;span class="text-blue"&gt;蓝色&lt;/span&gt;</code></pre>
+            </div>
+
+            <!-- Guide Section: Code Block -->
+            <div class="guide-section">
+                <h2>代码块</h2>
+                <h4>效果演示:</h4>
+                <pre><code>function calculate(a, b) {
+    // A multi-line code example
+    return a + b;
+}</code></pre>
+                <h4>HTML 代码 (注意 &lt; &gt; 的转义):</h4>
+                <pre><code>&lt;pre&gt;&lt;code&gt;function calculate(a, b) {
+    // A multi-line code example
+    return a + b;
+}&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            </div>
+
+            <!-- Guide Section: Special Blocks -->
+            <div class="guide-section">
+                <h2>特殊内容块</h2>
+                <h4>效果演示:</h4>
+                <blockquote>这是一个引用块，适合引用名言或关键信息。</blockquote>
+                <div class="problem-block"><p>这是一个“问题”模块，用于清晰地呈现您遇到的挑战。</p></div>
+                <div class="analysis-block"><p>这是一个“分析”模块，用于记录您对问题的思考和解决方案。</p></div>
+                <h4>HTML 代码:</h4>
+                <pre><code>&lt;blockquote&gt;这是一个引用块...&lt;/blockquote&gt;
+
+&lt;div class="problem-block"&gt;&lt;p&gt;这是一个“问题”模块...&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class="analysis-block"&gt;&lt;p&gt;这是一个“分析”模块...&lt;/p&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+             <!-- Guide Section: Lists -->
+             <div class="guide-section">
+                <h2>列表</h2>
+                <h4>效果演示:</h4>
+                <ul><li>无序列表项 1</li><li>无序列表项 2</li></ul>
+                <ol><li>有序列表项 1</li><li>有序列表项 2</li></ol>
+                <h4>HTML 代码:</h4>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;无序列表项 1&lt;/li&gt;
+    &lt;li&gt;无序列表项 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;有序列表项 1&lt;/li&gt;
+    &lt;li&gt;有序列表项 2&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+
+        </article>
+    </div>
+</body>
+</html>

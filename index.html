@@ -1,1 +1,41 @@
-test
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="blog-title">我的技术博客</div>
+
+    <header class="personal-info">
+        <div class="info-text">
+            <h2>你的名字</h2>
+            <p>一行简介，例如：热爱技术的开发者</p>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <nav id="nav-menu">
+        <a href="index.html" class="nav-button" id="btn-home" data-bg-color="#488cbd" data-description="返回主页，探索一切的起点。">首页</a>
+        <a href="BlogList.html" class="nav-button" id="btn-blog" data-bg-color="#6c584c" data-description="阅读我的技术文章、学习笔记和深度思考。">博客</a>
+        <a href="projects.html" class="nav-button" id="btn-projects" data-bg-color="#a98467" data-description="查看我参与和构建的开源项目及个人作品。">项目</a>
+        <a href="about.html" class="nav-button" id="btn-about" data-bg-color="#7a7a7a" data-description="了解更多关于我的背景、技能和联系方式。">关于</a>
+    </nav>
+
+    <main>
+        <!-- 主页的主要内容可以放在这里 -->
+    </main>
+
+    <!-- Description box for hover effect -->
+    <div id="description-box"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

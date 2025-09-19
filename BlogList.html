@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客列表</title>
+    <link rel="stylesheet" href="blog-list.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>文章列表</h1>
+        </header>
+
+        <!-- 1. 时间线容器 -->
+        <div class="timeline-container" id="timeline-container">
+            <div class="timeline-track" id="timeline-track">
+                <!-- 时间线节点将由 JavaScript 动态生成 -->
+            </div>
+        </div>
+
+        <!-- 2. 横向滚动的文章网格 -->
+        <main class="post-grid-scrollable" id="post-grid">
+            <!-- 文章内容将由 JavaScript 动态生成 -->
+        </main>
+
+        <!-- 3. 专题列表区域 -->
+        <section class="topic-section">
+            <header class="page-header">
+                <h1>专题列表</h1>
+            </header>
+            <div class="topic-grid" id="topic-grid">
+                <!-- 专题卡片将由 JavaScript 动态生成 -->
+            </div>
+        </section>
+
+        <a href="index.html" class="back-link">返回首页</a>
+    </div>
+
+    <!-- 3. 引入新的 JS 文件 -->
+    <script src="blog-list.js"></script>
+</body>
+</html>
